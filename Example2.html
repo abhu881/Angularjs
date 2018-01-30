@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="myApp">
 <head>
 </head>
  <title>Hello World Angular</title>
@@ -8,13 +8,15 @@
 
 <div ng-controller="MainController">
       
-      <h3> Hello {{ message}} </h3>
+    <h3> Hello {{ message}} </h3>
 </div>
 
-<script>
-var MainController = function($scope){
-          	$scope.message = "Hello!";
-};
+<script type="text/javascript">
+
+	var App = angular.module("myApp",[]);
+	var ctrl = App.controller("MainController", function($scope){
+					$scope.message = "World!";
+		});
 
 </script>
 </body>
